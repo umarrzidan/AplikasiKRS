@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/krs_anda"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/testbg"
+    tools:context=".KRSAndaActivity">
+
+    <!-- Tombol Kembali -->
+    <Button
+        android:id="@+id/back_button"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:background="@drawable/rounded_button_yellow_krs"
+        android:drawableStart="@drawable/arrow_back"
+        android:textColor="@color/white"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="21dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:padding="9dp"
+        android:gravity="center" />
+
+    <!-- Header -->
+    <TextView
+        android:id="@+id/krsanda_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="90dp"
+        android:layout_marginTop="-2dp"
+        android:fontFamily="@font/poppins_semibold"
+        android:text="KRS ANDA"
+        android:textColor="@color/yellow4"
+        android:textSize="19sp"
+        app:layout_constraintStart_toEndOf="@id/back_button"
+        app:layout_constraintTop_toTopOf="@id/back_button"
+        app:layout_constraintBottom_toBottomOf="@id/back_button" />
+
+    <View
+        android:id="@+id/yellow_line"
+        android:layout_width="0dp"
+        android:layout_height="3dp"
+        android:layout_marginTop="12dp"
+        android:background="#FFD358"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/krsanda_title"
+        app:layout_constraintWidth_percent="0.9" />
+
+    <!-- Informasi KRS -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/krs_info"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/rounded_background_white"
+        android:padding="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/yellow_line">
+
+        <!-- Nama -->
+        <TextView
+            android:id="@+id/nama_label"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingStart="15dp"
+            android:text="Nama  :"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/poppins_semibold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/nama_value"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:paddingStart="20dp"
+            android:background="@drawable/rounded_outline_blue"
+            android:text="Onky Ardhillah"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/nama_label" />
+
+        <!-- NIM -->
+        <TextView
+            android:id="@+id/nim_label"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingStart="15dp"
+            android:text="NIM  :"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/poppins_semibold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/nama_value" />
+
+        <TextView
+            android:id="@+id/nim_value"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:paddingStart="20dp"
+            android:background="@drawable/rounded_outline_blue"
+            android:text="09031282227085"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/nim_label" />
+
+        <!-- Program Studi -->
+        <TextView
+            android:id="@+id/prodi_label"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingStart="15dp"
+            android:text="Program Studi  :"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/poppins_semibold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/nim_value" />
+
+        <TextView
+            android:id="@+id/prodi_value"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:paddingStart="20dp"
+            android:background="@drawable/rounded_outline_blue"
+            android:text="Sistem Informasi"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/prodi_label" />
+
+        <!-- Dosen Pembimbing -->
+        <TextView
+            android:id="@+id/dosbing_label"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingStart="15dp"
+            android:text="Dosen Pembimbing  :"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/poppins_semibold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/prodi_value" />
+
+        <TextView
+            android:id="@+id/dosbing_value"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:paddingStart="20dp"
+            android:background="@drawable/rounded_outline_blue"
+            android:text="Ari Wedhasmara, S.Kom., M.Kom."
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/dosbing_label" />
+
+        <!-- SKS -->
+        <TextView
+            android:id="@+id/sks_label"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingStart="15dp"
+            android:text="SKS  :"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/poppins_semibold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/dosbing_value" />
+
+        <TextView
+            android:id="@+id/totalSKSTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:paddingStart="20dp"
+            android:background="@drawable/rounded_outline_blue"
+            android:text=" 0"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/sks_label" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- Tombol Ubah dan Unduh -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/button_container"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/krs_info">
+
+        <!-- Tombol Ubah -->
+        <Button
+            android:id="@+id/ubah_pilihan_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"
+            android:background="@drawable/rounded_button_yellow"
+            android:padding="5dp"
+            android:textAlignment="center"
+            android:textSize="18sp"
+            android:text="UBAH PILIHAN"
+            android:textColor="@color/white"
+            android:fontFamily="@font/poppins_semibold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/unduh_krs_button" />
+
+        <!-- Tombol Unduh -->
+        <Button
+            android:id="@+id/unduh_krs_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"
+            android:background="@drawable/rounded_button_yellow"
+            android:padding="5dp"
+            android:textAlignment="center"
+            android:textSize="18sp"
+            android:text="UNDUH"
+            android:textColor="@color/white"
+            android:fontFamily="@font/poppins_semibold"
+            app:layout_constraintStart_toEndOf="@id/ubah_pilihan_button"
+            app:layout_constraintEnd_toEndOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- Spinner Semester -->
+    <Spinner
+        android:id="@+id/semester_spinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/rounded_outline_blue"
+        android:padding="10dp"
+        android:paddingStart="40dp"
+        android:paddingEnd="40dp"
+        android:textAlignment="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/button_container" />
+
+    <!-- RecyclerView untuk daftar mata kuliah -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@id/semester_spinner"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
